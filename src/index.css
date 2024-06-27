@@ -3,21 +3,107 @@
   margin: 0;
   box-sizing: border-box;
 }
-.board {
+
+body {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 40px;
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.game_info {
+  margin: 80px 0 0 25px;
+  width: 220px;
+}
+
+.game_info_list {
+  list-style: none;
+}
+
+.descr_btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  height: 60px;
+  width: 180px;
+  font-weight: 500;
+  font-size: 21px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: .5s all;
+  margin: 0px 20px 10px;
+}
+
+.descr_btn:hover {
+  border: 1px solid rgb(255, 255, 255);
+  color: #000;
+}
+
+.descr_btn_first {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+
+  width: 200px;
+  height: 50px;
+}
+
+.descr_btn_first:hover {
+  color: #24d424;
+}
+
+/* .playfair-display-heading {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-width: 100vw;
+}
+
+.board {
+  display: flex;
   flex-direction: column;
+  margin-top: 50px;
+}
+
+.status {
+  text-shadow: #FC0 2px 0 10px;
 }
 
 .row {
   display: flex;
 }
+
+.status::selection {
+  color: yellow;
+}
+
 .square {
-  height: 36px;
-  width: 36px;
+  height: 20vh;
+  width: 20vh;
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
+  font-size: 7rem;
+  text-shadow: rgb(0, 0, 0) 6px 0 8px;
+}
+
+.winning_square {
+  background-color: #0ec70e;
 }
